@@ -1,6 +1,32 @@
+# Building in DRS
+
+### 1. livox sdk 2
+```
+cd ~/git
+git clone https://github.com/Livox-SDK/Livox-SDK2.git
+cd ./Livox-SDK2/
+mkdir build
+cd build
+cmake .. && make -j
+sudo make install
+```
+
+### 2. livox ros driver 2
+```
+cd ~/catkin_ws/src
+git clone https://github.com/ori-drs/livox_ros_driver2.git
+catkin build livox_ros_driver2
+source ~/catkin_ws/devel/setup.bash
+```
+
+
 # Livox ROS Driver 2
 
 Livox ROS Driver 2 is the 2nd-generation driver package used to connect LiDAR products produced by Livox, applicable for ROS (noetic recommended) and ROS2 (foxy or humble recommended).
+
+  **Note :**
+
+  As a debugging tool, Livox ROS Driver is not recommended for mass production but limited to test scenarios. You should optimize the code based on the original source to meet your various needs.
 
 ## 1. Preparation
 
